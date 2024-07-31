@@ -23,38 +23,53 @@
         .action:hover { background-color: rgba(255, 0, 0, 0.7);}
 
         /* ":active" : 요소를 클릭한 상태일 때 */
-        
+        .action:active { background-color: rgba(0, 0, 255, 0.7); }
 
-        /* ":focus" :  */
-
+        /* ":focus" : 요소의 커서가 맞춰져 있을 때  */
+        .action:focus { background-color: rgba(0, 255, 0, 0.7); }
 
         /* UI 요소 선택자 */
-        /* ":checked" :  */
-        
-        /* ":enabled" :  */
+        /* ":checked" : 요소가 채크된 상태일 때 */
+        .ui:checked + .label { color: rgba(255, 0, 0, 0.7); }
 
-        /* ":disabled" :  */
-
+        /* ":enabled" : 요소가 사용 가능한 상태일 때 */
+        .ui:enabled + .label { font-weight: 900; }
+        /* ":disabled" : 요소가 사용 불가능한 상태일 때 */
+        .ui:disabled + .label { text-decoration: line-through; }
 
         /* 구조 선택자 */
-        /* ":first-child" :  */
-        
-        /* ":last-child" :  */
-
+        /* ":first-child" : 선택자에 해당하는 요소 중 첫번째 형제 요소를 선택 */
+        .structural:first-child { background-color: aquamarine; }
+        /* ":last-child" : 선택자에 해당하는 요소 중 마지막 형제 요소를 선택 */
+        .structural:last-child { background-color: yellow;}
 
 
         /* 가상 요소 선택자 */
-        /*   */
+        /* 요소의 특정 부분을 선택할 때 사용 */
 
-        /* "::first-letter" :  */
+        /* "::first-letter" : 컨텐츠의 첫 글자 */
+        .pseudo1::first-letter { font-size: 42px; }
 
-        /* "::first-line" :  */
+        /* "::first-line" : 컨텐츠의 첫 줄 */
+        .pseudo1::first-line { font-weight: 900; }
 
-        /* "::after" :  */
+        /* "::after" : 컨텐츠의 뒤의 위치를 선택 */
+        .pseudo2::after { 
+            content: '★';
+            color: gold;
 
-        /* "::before" :  */
+        }
 
-        /* "::selection" :  */
+        /* "::before" : 컨텐츠의 앞의 위치를 선택 */
+        .pseudo2::before {
+            content: '♣';
+            color: green;
+        }
+
+        /* "::selection" : 드래그한 컨텐츠를 선택 (대부분의 브라우저에서 지원X) */
+        .pseudo2::selection {
+            background-color: rgba(255, 255, 0, 0.4);
+        }
 
     </style>
 </head>
