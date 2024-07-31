@@ -21,22 +21,26 @@
             - Embedding style : HTML 문서의 head 요소 중 style 요소에 css를 작성하는 방식
             - Link style : HTML 문서 외부에 있는 css 파일을 로드해서 사용하는 방식
             - 적용 우선순위 : Inline > Embedding > Link
-     -->
+    -->
 
-     <!-- Link style -->
+    <!-- Link style -->
+    <link rel="stylesheet" href="./reset.css">
 
-     <!-- Embedding style -->
+    <!-- Embedding style -->
+    <style>
+        h2 { color: blueviolet; }
+    </style>
 
-     <!--
+    <!--
         Reset CSS : 
-            - 
-            - 
-     -->
+            - 모든 웹 브라우저는 각자 서로 다른 기본 스타일을 가지고 있어 CSS 없이 사용할 때 다르게 나타남
+            - Reset CSS를 사용하여 HTML 기본 스타일을 제거하여 브라우저 간의 동일한 스타일을 사용할 수 있도록 함
+    -->
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+    <h1 style="color: coral;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
     <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
     <!-- Inline style -->
-    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
+    <h3 style="color: green;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
 </body>
 </html>
