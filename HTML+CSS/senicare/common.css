@@ -9,6 +9,8 @@
 
 :root {
     --primary-color: rgba(0, 191, 122, 1);
+    --primary-10-color: rgba(0, 191, 122, 0.1);
+    --primary-20-color: rgba(0, 191, 122, 0.2);
     --error-color: rgba(255, 84, 64, 1);
     --gray-color: rgba(138, 146, 166, 1);
     --dark-gray-color: rgba(64, 64, 64, 1);
@@ -32,7 +34,14 @@ body {
     color: var(--gray-color);
 }
 
+.input-box .input-area {
+    display: flex;
+    gap: 10px;
+}
+
 .input-box input {
+    flex: 1;
+
     background: none;
     border: none;
     outline: none;
@@ -54,6 +63,33 @@ input::placeholder {
     color: var(--gray-color);
 }
 
+.input-box .input-button {
+    border-radius: 6px;
+    padding: 8px 0;
+    width: 110px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 175%;
+    color: var(--gray-color);
+    text-align: center;
+}
+
+.input-button.disable {
+    background-color: rgba(238, 238, 238, 1);
+    color: var(--gray-color);
+}
+
+.input-button.active {
+    background-color: var(--primary-10-color);
+    color: var(--primary-color);
+}
+
+.input-button.active:hover {
+    background-color: var(--primary-20-color);
+    cursor: pointer;
+}
+
 .input-box .message {
     margin-top: -4px;
     height: 16px;
@@ -70,11 +106,9 @@ input::placeholder {
     color: var(--primary-color);
 }
 
-.primary-button {
+.button {
     border-radius: 6px;
     padding: 8px 24px;
-
-    background-color: var(--primary-color);
 
     font-size: 16px;
     font-weight: 400;
@@ -84,9 +118,22 @@ input::placeholder {
     color: rgba(255, 255, 255, 1);
 }
 
-.primary-button:hover {
+.button:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+.button.primary {
+    background-color: var(--primary-color);
+}
+
+.button.disable {
+    background-color: var(--gray-color);
+}
+
+.disable:hover {
+    opacity: 1;
+    cursor: default;
 }
 
 .full-width {
@@ -126,6 +173,11 @@ input::placeholder {
 .sns-button:hover {
     opacity: 0.8;
     cursor: pointer;
+}
+
+.sns-button.md {
+    width: 40px;
+    height: 40px;
 }
 
 .sns-button.kakao {
