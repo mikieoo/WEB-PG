@@ -134,5 +134,20 @@ for (var key in chaemi) {
     console.log(chaemi[key]);
 }
 
-
 console.log('==============================');
+
+// var soonJong = goJong;
+// soonJong.name = '이척';
+
+// console.log(soonJong); // 얕은 복사 (주소를 복사)
+
+soonJong = { // 깊은 복사
+    name: goJong.name,
+    age: goJong.age,
+    address: goJong.address
+}
+
+soonJong.name = '이척';
+
+console.log(soonJong);
+console.log(goJong);
