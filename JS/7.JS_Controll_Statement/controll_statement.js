@@ -96,5 +96,8 @@ console.log('==============================');
     continue 문
     - 반복문의 코드 블럭의 맨 마지막으로 커서를 이동
 */
-
+for (var number = 0; number < 10; number++){
+    if(number % 2) continue;
+    console.log(number);
+}
 
