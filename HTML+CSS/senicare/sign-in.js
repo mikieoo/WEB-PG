@@ -7,7 +7,7 @@ function onSignInButtonClickHandler (event) {
     var userId = userIdElement.value;
     var userPw = userPwElement.value;
 
-    if (userId !== 'qwer1234' || userPw !== 1234) {
+    if (userId !== 'qwer1234' || userPw !== '1234') {
         messageElement.textContent = '로그인 정보가 일치하지 않습니다.';
         return;
     } 
