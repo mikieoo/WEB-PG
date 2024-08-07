@@ -21,20 +21,20 @@
                     <div class="input-box">
                         <div class="label">아이디</div>
                         <div class="input-area">
-                            <input type="text" placeholder="아이디를 입력해주세요." />
+                            <input id="user-id" type="text" placeholder="아이디를 입력해주세요." />
                         </div>
                         <div class="message"></div>
                     </div>
                     <div class="input-box">
                         <div class="label">비밀번호</div>
                         <div class="input-area">
-                            <input type="password" placeholder="비밀번호를 입력해주세요." />
+                            <input id="user-password" type="password" placeholder="비밀번호를 입력해주세요." />
                         </div>
-                        <div class="message error"></div>
+                        <div id="message" class="message error"></div>
                     </div>
                 </div>
                 <div class="button-container">
-                    <div class="button primary full-width">로그인</div>
+                    <div id="sign-in-button" class="button primary full-width">로그인</div>
                     <div class="link" onclick="location.href='./sign-up.html'">회원가입</div>
                 </div>
                 <div style="width: 64px;" class="divider"></div>
@@ -48,5 +48,6 @@
             </div>
         </div>
     </div>
+<script src="./sign-in.js"></script>
 </body>
 </html>
