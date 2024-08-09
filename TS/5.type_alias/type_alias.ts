@@ -26,11 +26,13 @@ const human1: IHuman = {
 type THuman = {
     name: string,
     age: number;
+    address: string
 }
 
 const human2: THuman = {
     name: '홍길동',
-    age: 23
+    age: 23,
+    address: '부산진'
 }
 
 // 3. class 이용
@@ -43,6 +45,8 @@ const human3: CHuman = {
     name: '홍길동',
     age: 23
 }
+
+const human: THuman = {...human2, address: '부산시'};
 
 
 console.log('==================================================');
