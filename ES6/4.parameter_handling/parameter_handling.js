@@ -55,3 +55,42 @@ console.log(newNumbers2);
 
 newNumbers2 = [...numbers2, ...numbers]; 
 console.log(newNumbers2);
+
+console.log('========================================');
+
+// 배열 요소 추가에 사용
+newNumbers2 = [...newNumbers2, 9, 10];
+console.log(newNumbers2);
+
+console.log('========================================');
+
+// 객체 복사, 연결, 요소 추가에 사용
+const King = {
+    name: '이성계',
+    tombName: '태조'
+};
+
+let newKing = {...King};
+newKing.name = '이방과';
+console.log(King);
+console.log(newKing);
+
+const kingInfo = {
+    address: '서울특별시',
+    country: '고려'
+}
+
+newKing = {...King, ...kingInfo};
+console.log(newKing);
+
+newKing = {...kingInfo, ...King};
+console.log(newKing);
+
+newKing = {...King, birth: '1335-11-04'};
+console.log(newKing);
+
+newKing = {...King, name: '이단', birth: '1335-11-04'};
+console.log(newKing);
+
+newKing = {name: '이단', ...King, birth: '1335-11-04'};
+console.log(newKing);
