@@ -18,6 +18,7 @@ let king = {
 // const tomb = king.tomb;
 // const birth = king.birth;
 
+
 /*
     배열 디스트럭처링
     - 배열의 각각의 요소를 배열로부터 추출해서 변수에 할당
